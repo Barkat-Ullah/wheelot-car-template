@@ -1,11 +1,15 @@
 'use client';
 
+import Hero from "./pages/Hero";
+
 const HomeSection = () => {
-    return (
-        <div>
-            <h1>HomeSection</h1>
-        </div>
-    );
+  return (
+    <>
+
+      <Hero />
+
+    </>
+  );
 };
 
 export default HomeSection;
