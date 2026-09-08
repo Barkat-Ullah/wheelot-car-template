@@ -4,6 +4,7 @@ import Hero from "./pages/Hero";
 import CategorySection from "./pages/CategorySection";
 import AboutSection from "./pages/AboutSection";
 import VehicleListingsSection from "./pages/VehicleListingsSection";
+import WorkSection from "./pages/WorkSection";
 
 const HomeSection = () => {
   return (
@@ -12,11 +13,13 @@ const HomeSection = () => {
       <CategorySection />
       <AboutSection />
       <VehicleListingsSection />
+      <WorkSection />
     </>
   );
 };
 
 export default HomeSection;
+
 
 
 
