@@ -123,11 +123,11 @@ const CategorySection = () => {
             >
               <Link
                 href={category.link || "/#vehicles"}
-                className="animated-border zoom-animate group relative flex flex-col justify-between h-full p-6 sm:p-7 rounded-2xl bg-[#FFFDF5]/[0.05] hover:bg-[#FFFDF5]/[0.09] backdrop-blur-[12px] border border-[#FFFDF5]/[0.08] shadow-lg shadow-black/40 overflow-hidden block"
+                className="spotlight-card group relative flex flex-col justify-between h-full p-6 sm:p-7 rounded-2xl overflow-hidden block cursor-pointer"
               >
                 <div>
                   {/* Category SVG Icon Container */}
-                  <div className="p-4 bg-[#FFFDF5]/[0.08] rounded-xl border border-white/10 backdrop-blur-[3px] flex items-center justify-center w-fit mb-6 sm:mb-8 group-hover:scale-105 group-hover:bg-[#FFBD37]/15 group-hover:border-[#FFBD37]/40 transition-all duration-300 shadow-sm shadow-black/30">
+                  <div className="p-4 bg-[#FFFDF5]/[0.08] group-hover:bg-[#FFBD37]/15 rounded-xl border border-white/10 group-hover:border-[#FFBD37]/40 backdrop-blur-[4px] flex items-center justify-center w-fit mb-6 sm:mb-8 group-hover:scale-105 transition-all duration-300 shadow-sm shadow-black/30">
                     <div className="relative w-11 h-6 sm:w-12 sm:h-7 flex items-center justify-center">
                       <Image
                         src={category.icon}
@@ -139,7 +139,7 @@ const CategorySection = () => {
                   </div>
 
                   {/* Title */}
-                  <h3 className="font-primary text-lg sm:text-xl font-normal text-[#FFBD37] group-hover:text-white transition-colors duration-300 mb-2.5 sm:mb-3">
+                  <h3 className="font-primary text-lg sm:text-xl font-normal text-[#FFBD37] group-hover:text-white transition-colors duration-200 mb-2.5 sm:mb-3">
                     {category.title}
                   </h3>
 
