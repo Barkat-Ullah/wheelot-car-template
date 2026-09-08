@@ -123,6 +123,68 @@ body {
   box-shadow: 0 16px 36px -8px rgba(255, 189, 55, 0.22);
 }
 
+/* Spotlight Border Card */
+@keyframes spin-spotlight {
+  0% {
+    --angle: 0deg;
+  }
+  100% {
+    --angle: 360deg;
+  }
+}
+
+.spotlight-card {
+  position: relative;
+  border-radius: 16px;
+  background: rgba(15, 15, 18, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transition: transform 250ms ease-out, box-shadow 250ms ease-out, background-color 250ms ease-out;
+}
+
+.spotlight-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: conic-gradient(
+    from var(--angle),
+    transparent 0deg,
+    rgba(255, 248, 231, 0.95) 45deg,
+    rgba(255, 189, 55, 0.9) 70deg,
+    transparent 115deg
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  animation: spin-spotlight 8s linear infinite;
+  transition: opacity 250ms ease-out;
+  opacity: 0.85;
+}
+
+.spotlight-card:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 16px 36px -8px rgba(255, 189, 55, 0.25), 0 0 24px -4px rgba(255, 248, 231, 0.18);
+  background: rgba(18, 18, 22, 0.92);
+}
+
+.spotlight-card:hover::before {
+  animation-duration: 2.2s;
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spotlight-card::before {
+    animation: none;
+    background: rgba(255, 189, 55, 0.3);
+  }
+  .spotlight-card:hover {
+    transform: none;
+  }
+}
+
 @keyframes spin-slow {
   from {
     transform: rotate(0deg);
@@ -131,6 +193,7 @@ body {
     transform: rotate(360deg);
   }
 }
+
 
 .animate-spin-slow {
   animation: spin-slow 20s linear infinite;
