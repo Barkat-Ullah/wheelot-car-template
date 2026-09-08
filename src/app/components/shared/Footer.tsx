@@ -201,7 +201,7 @@ const Footer = () => {
           <p>
             All rights reserved by{" "}
             <span className="text-[#FFB900] font-semibold hover:underline cursor-pointer">
-              &copy; DesignToCodes
+              &copy; BarkaToCode
             </span>
           </p>
         </div>
@@ -211,4 +211,4 @@ const Footer = () => {
 };
 
 export default Footer;
-
+

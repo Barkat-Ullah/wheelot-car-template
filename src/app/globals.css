@@ -69,6 +69,60 @@ body {
 }
 
 /* Keyframes */
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes borderRotate {
+  0% {
+    --angle: 0deg;
+  }
+  100% {
+    --angle: 360deg;
+  }
+}
+
+.animated-border {
+  animation: 3.5s linear infinite borderRotate;
+  position: relative;
+}
+
+.animated-border::before {
+  content: "";
+  border-radius: inherit;
+  background: conic-gradient(
+    from var(--angle),
+    rgba(255, 253, 245, 0.08),
+    rgba(255, 189, 55, 0.8) 0.1turn,
+    rgba(255, 189, 55, 1) 0.15turn,
+    rgba(255, 253, 245, 0.08) 0.25turn
+  );
+  -webkit-mask-composite: xor;
+  pointer-events: none;
+  padding: 1px;
+  position: absolute;
+  inset: 0;
+  -webkit-mask-image: linear-gradient(#fff 0 0), linear-gradient(#fff 0 0);
+  -webkit-mask-position: 0 0, 0 0;
+  -webkit-mask-size: auto, auto;
+  -webkit-mask-repeat: repeat, repeat;
+  -webkit-mask-clip: content-box, border-box;
+  -webkit-mask-origin: content-box, border-box;
+  mask-composite: exclude;
+  mask-mode: match-source;
+}
+
+.zoom-animate {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, background-color 0.4s ease, border-color 0.4s ease;
+}
+
+.zoom-animate:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px -8px rgba(255, 189, 55, 0.22);
+}
+
 @keyframes spin-slow {
   from {
     transform: rotate(0deg);
@@ -96,3 +150,4 @@ body {
 .animate-pulse-subtle {
   animation: pulse-subtle 4s ease-in-out infinite;
 }
+
