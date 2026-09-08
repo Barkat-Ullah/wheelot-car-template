@@ -5,6 +5,8 @@ import CategorySection from "./pages/CategorySection";
 import AboutSection from "./pages/AboutSection";
 import VehicleListingsSection from "./pages/VehicleListingsSection";
 import WorkSection from "./pages/WorkSection";
+import TestimonialSection from "./pages/TestimonialSection";
+import CTASection from "./pages/CTASection";
 
 const HomeSection = () => {
   return (
@@ -14,11 +16,15 @@ const HomeSection = () => {
       <AboutSection />
       <VehicleListingsSection />
       <WorkSection />
+      <TestimonialSection />
+      <CTASection />
     </>
   );
 };
 
 export default HomeSection;
+
+
 
 
 
