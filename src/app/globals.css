@@ -164,13 +164,15 @@ body {
   opacity: 0.85;
 }
 
-.spotlight-card:hover {
-  transform: translateY(-4px) scale(1.01);
+.spotlight-card:hover,
+.spotlight-card:focus-within {
+  transform: translateY(-2px);
   box-shadow: 0 16px 36px -8px rgba(255, 189, 55, 0.25), 0 0 24px -4px rgba(255, 248, 231, 0.18);
   background: rgba(18, 18, 22, 0.92);
 }
 
-.spotlight-card:hover::before {
+.spotlight-card:hover::before,
+.spotlight-card:focus-within::before {
   animation-duration: 2.2s;
   opacity: 1;
 }

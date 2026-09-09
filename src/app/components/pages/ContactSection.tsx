@@ -123,7 +123,7 @@ const ContactSection = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
               {/* Name */}
               <div className="w-full">
-                <div className="animated-border p-[1px] rounded-lg">
+                <div className="spotlight-card rounded-xl overflow-hidden">
                   <input
                     type="text"
                     name="name"
@@ -131,14 +131,14 @@ const ContactSection = () => {
                     onChange={handleChange}
                     placeholder="John Anderson"
                     required
-                    className="w-full bg-[#FFFDF5]/10 rounded-lg px-5 sm:px-6 py-4 sm:py-5 backdrop-blur-[3px] text-stone-50 text-sm sm:text-base font-normal font-secondary leading-normal placeholder:text-stone-50/50 focus:outline-none focus:bg-[#FFFDF5]/15 transition-all"
+                    className="w-full bg-transparent px-5 sm:px-6 py-4 sm:py-5 text-stone-50 text-sm sm:text-base font-normal font-secondary leading-normal placeholder:text-stone-50/50 focus:outline-none transition-all"
                   />
                 </div>
               </div>
 
               {/* Email */}
               <div className="w-full">
-                <div className="animated-border p-[1px] rounded-lg">
+                <div className="spotlight-card rounded-xl overflow-hidden">
                   <input
                     type="email"
                     name="email"
@@ -146,35 +146,35 @@ const ContactSection = () => {
                     onChange={handleChange}
                     placeholder="wheelot@mail.com"
                     required
-                    className="w-full bg-[#FFFDF5]/10 rounded-lg px-5 sm:px-6 py-4 sm:py-5 backdrop-blur-[3px] text-stone-50 text-sm sm:text-base font-normal font-secondary leading-normal placeholder:text-stone-50/50 focus:outline-none focus:bg-[#FFFDF5]/15 transition-all"
+                    className="w-full bg-transparent px-5 sm:px-6 py-4 sm:py-5 text-stone-50 text-sm sm:text-base font-normal font-secondary leading-normal placeholder:text-stone-50/50 focus:outline-none transition-all"
                   />
                 </div>
               </div>
 
               {/* Vehicle Model */}
               <div className="w-full">
-                <div className="animated-border p-[1px] rounded-lg">
+                <div className="spotlight-card rounded-xl overflow-hidden">
                   <input
                     type="text"
                     name="model"
                     value={formData.model}
                     onChange={handleChange}
                     placeholder="Audi R8 – 2021"
-                    className="w-full bg-[#FFFDF5]/10 rounded-lg px-5 sm:px-6 py-4 sm:py-5 backdrop-blur-[3px] text-stone-50 text-sm sm:text-base font-normal font-secondary leading-normal placeholder:text-stone-50/50 focus:outline-none focus:bg-[#FFFDF5]/15 transition-all"
+                    className="w-full bg-transparent px-5 sm:px-6 py-4 sm:py-5 text-stone-50 text-sm sm:text-base font-normal font-secondary leading-normal placeholder:text-stone-50/50 focus:outline-none transition-all"
                   />
                 </div>
               </div>
 
               {/* Phone */}
               <div className="w-full">
-                <div className="animated-border p-[1px] rounded-lg">
+                <div className="spotlight-card rounded-xl overflow-hidden">
                   <input
                     type="tel"
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
                     placeholder="+1 325 554 9012"
-                    className="w-full bg-[#FFFDF5]/10 rounded-lg px-5 sm:px-6 py-4 sm:py-5 backdrop-blur-[3px] text-stone-50 text-sm sm:text-base font-normal font-secondary leading-normal placeholder:text-stone-50/50 focus:outline-none focus:bg-[#FFFDF5]/15 transition-all"
+                    className="w-full bg-transparent px-5 sm:px-6 py-4 sm:py-5 text-stone-50 text-sm sm:text-base font-normal font-secondary leading-normal placeholder:text-stone-50/50 focus:outline-none transition-all"
                   />
                 </div>
               </div>
@@ -182,7 +182,7 @@ const ContactSection = () => {
 
             {/* Message Textarea */}
             <div className="w-full">
-              <div className="animated-border p-[1px] rounded-lg">
+              <div className="spotlight-card rounded-xl overflow-hidden">
                 <textarea
                   name="message"
                   value={formData.message}
@@ -190,7 +190,7 @@ const ContactSection = () => {
                   placeholder="I want to know availability and price"
                   rows={5}
                   required
-                  className="w-full bg-[#FFFDF5]/10 rounded-lg px-5 sm:px-6 py-4 sm:py-5 backdrop-blur-[3px] text-stone-50 text-sm sm:text-base font-normal font-secondary leading-normal placeholder:text-stone-50/50 focus:outline-none focus:bg-[#FFFDF5]/15 transition-all min-h-[160px] sm:min-h-[190px] resize-y"
+                  className="w-full bg-transparent px-5 sm:px-6 py-4 sm:py-5 text-stone-50 text-sm sm:text-base font-normal font-secondary leading-normal placeholder:text-stone-50/50 focus:outline-none transition-all min-h-[160px] sm:min-h-[190px] resize-y"
                 />
               </div>
             </div>

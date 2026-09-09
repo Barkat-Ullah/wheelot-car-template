@@ -132,7 +132,7 @@ const FAQSection: React.FC<FAQSectionProps> = ({ hideDescription = false }) => {
                     delay: index * 0.08,
                     ease: "easeOut",
                   }}
-                  className="rounded-[12px] overflow-hidden transition-all duration-300 animated-border bg-[#FFFDF5]/[0.06] backdrop-blur-[3px] border border-white/10"
+                  className="spotlight-card group rounded-xl overflow-hidden transition-all duration-300"
                 >
                   {/* Question Header Button */}
                   <button
