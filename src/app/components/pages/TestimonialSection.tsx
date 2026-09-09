@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowUpRight, ArrowDownLeft, ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 export interface TestimonialItem {
   id: string;

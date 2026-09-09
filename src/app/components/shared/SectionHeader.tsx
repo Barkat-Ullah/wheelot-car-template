@@ -89,10 +89,7 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
     });
   };
 
-  const MotionWrapper = animate ? motion.div : "div";
-  const MotionSubtitle = animate ? motion.h4 : "h4";
-  const MotionHeading = animate ? motion(HeadingTag) : HeadingTag;
-  const MotionDescription = animate ? motion.p : "p";
+  const HeadingElement = HeadingTag;
 
   return (
     <div
@@ -100,45 +97,42 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
     >
       {/* Subtitle */}
       {subtitle && (
-        <MotionSubtitle
-          {...(animate && {
-            initial: { opacity: 0, y: -12 },
-            whileInView: { opacity: 1, y: 0 },
-            viewport: { once: true },
-            transition: { duration: 0.5, ease: "easeOut" },
-          })}
+        <motion.h4
+          initial={animate ? { opacity: 0, y: -12 } : undefined}
+          whileInView={animate ? { opacity: 1, y: 0 } : undefined}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
           className={`font-primary text-base sm:text-lg md:text-xl font-normal text-[#FFBD37] gold-text-glow mb-2.5 sm:mb-3 tracking-wide capitalize ${subtitleClassName}`}
         >
           {subtitle}
-        </MotionSubtitle>
+        </motion.h4>
       )}
 
       {/* Main Title */}
-      <MotionHeading
-        {...(animate && {
-          initial: { opacity: 0, y: 16 },
-          whileInView: { opacity: 1, y: 0 },
-          viewport: { once: true },
-          transition: { duration: 0.6, delay: 0.1, ease: "easeOut" },
-        })}
-        className={`font-primary text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal leading-[1.2] text-white tracking-tight mb-3 sm:mb-4 capitalize ${titleClassName}`}
+      <motion.div
+        initial={animate ? { opacity: 0, y: 16 } : undefined}
+        whileInView={animate ? { opacity: 1, y: 0 } : undefined}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
       >
-        {renderTitleContent()}
-      </MotionHeading>
+        <HeadingElement
+          className={`font-primary text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal leading-[1.2] text-white tracking-tight mb-3 sm:mb-4 capitalize ${titleClassName}`}
+        >
+          {renderTitleContent()}
+        </HeadingElement>
+      </motion.div>
 
       {/* Description */}
       {description && (
-        <MotionDescription
-          {...(animate && {
-            initial: { opacity: 0, y: 16 },
-            whileInView: { opacity: 1, y: 0 },
-            viewport: { once: true },
-            transition: { duration: 0.6, delay: 0.2, ease: "easeOut" },
-          })}
+        <motion.p
+          initial={animate ? { opacity: 0, y: 16 } : undefined}
+          whileInView={animate ? { opacity: 1, y: 0 } : undefined}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
           className={`font-secondary text-xs sm:text-sm md:text-base lg:text-lg text-white/80 font-normal leading-relaxed max-w-2xl ${descriptionClassName}`}
         >
           {description}
-        </MotionDescription>
+        </motion.p>
       )}
     </div>
   );

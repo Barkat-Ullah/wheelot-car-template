@@ -19,7 +19,7 @@ const popularBrandsCol2 = [
 
 const Footer = () => {
   return (
-    <footer id="contact" className="relative w-full bg-[#0B0B0E] pt-16 pb-10 border-t border-[#FFFDF5]/5 overflow-hidden">
+    <footer id="footer" className="relative w-full bg-[#0B0B0E] pt-16 pb-10 border-t border-[#FFFDF5]/5 overflow-hidden">
       {/* Background ambient lighting */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden z-0" aria-hidden="true">
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#FFB900]/5 rounded-full blur-[140px]" />
