@@ -49,7 +49,7 @@ const Hero = () => {
             className="order-2 lg:order-1 lg:col-span-7 xl:col-span-6 flex flex-col items-center lg:items-start text-center lg:text-left space-y-5 sm:space-y-6 lg:space-y-7 z-20"
           >
             {/* Headline with exact line breaks & typography */}
-            <h1 className="font-primary text-3xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl font-normal leading-[1.15] tracking-tight text-white">
+            <h1 className="font-primary text-2xl sm:text-4xl md:text-6xl lg:text-6xl xl:text-7xl font-normal leading-[1.15] tracking-tight text-white break-words">
               <span className="block">Find Your Perfect</span>
               <span className="block mt-1 sm:mt-2">
                 Vehicle{" "}

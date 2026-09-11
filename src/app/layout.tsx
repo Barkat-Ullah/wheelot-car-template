@@ -27,9 +27,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${brunoAce.variable} ${inter.variable} h-full antialiased scroll-smooth`}
+      className={`${brunoAce.variable} ${inter.variable} h-full antialiased scroll-smooth bg-[#0b0b0e] max-w-full overflow-x-hidden`}
     >
-      <body className="min-h-full flex flex-col bg-[#0b0b0e] text-[#fafaf9] font-sans antialiased overflow-x-hidden selection:bg-[#FFB900] selection:text-black">
+      <body className="min-h-full w-full max-w-full flex flex-col bg-[#0b0b0e] text-[#fafaf9] font-sans antialiased overflow-x-hidden selection:bg-[#FFB900] selection:text-black">
         {children}
       </body>
     </html>
